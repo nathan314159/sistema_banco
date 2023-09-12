@@ -2,12 +2,19 @@
 
 sistema_banco
 online banck system
+
 Paso 1 >> https://github.com/nathan314159/sistema_banco.git
+
 Paso 2 >> Entrar en la carpeta centralBank en cmd
+
 Paso 3 >> Crear entorno virtual (ejecutar comando) -> vitualenv env
+
 Paso 4 >> Activar entorno virtual (ejecutar comando) -> env\Scripts\.activate
+
 Paso 4.1 >> Para mayor informacion revisar video sobre entorno virtual django: https://www.youtube.com/watch?v=t9KNwBtE5-M&t=286s
+
 Paso 5 >> Instalar dependencias (ejecutar comando) -> pip install -r requirements.txt
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 El programa se divide en dos partes:
 1)Para trámites presenciales, existe un empleado y cliente. En este caso tendrás que ingresar como empleado (Your username is: teller1 and your generated password is: 41124372) 
