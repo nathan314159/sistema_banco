@@ -1,0 +1,33 @@
+{% extends "registration/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/transaction.css' %}">
+    {% endblock %}
+    <title>Document</title>
+</head>
+<body>
+
+{% block content %}
+<div class="center-title">
+<h1>Banco America</h1>
+</div>
+
+<div class="center-container">
+    <div class="inside conrainer">
+        <div class="welcome">
+            <p>Welcome, {{ user.username }}</p>
+        </div>
+    <p><a href="{% url 'banco_america:login' %}" class="custome-button">Login Page</a></p>
+    <p><a href="{% url 'account:logout_user' %}" class="custome-button">Logout Page</a></p>
+    <p><a href="{% url 'banco_america:teller' %}" class="custome-button">Teller Page</a></p>
+    <p><a href="{% url 'banco_america:profile' %}" class="custome-button">Profile Page</a></p>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

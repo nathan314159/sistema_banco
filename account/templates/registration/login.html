@@ -1,0 +1,39 @@
+{% extends "registration/base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    {% load static %}
+
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    {% endblock %}
+
+
+</head>
+<body>
+    {% block content %}
+<div class="title">
+<h1>Login</h1>
+</div>
+<div class="center-container">
+    <form method="POST" >
+        {%csrf_token%} {{form.as_p}}
+        <button type="submit" class="custome-button">Login</button>
+        <a href="/banco_america/client/" class="custome-button">Registration page</a>
+        <a href="{% url 'banco_america:home' %}" class="custome-button">Home</a>
+        <div class="download-container">
+            {% if file_path and file_url %}
+            <a href="{{ file_url }}" download="{{ file_name }}" class="download">Click here to download your password</a>
+            {% endif %}
+            </div>
+        </div>
+    </form>
+
+{% endblock %}
+</body>
+</html>

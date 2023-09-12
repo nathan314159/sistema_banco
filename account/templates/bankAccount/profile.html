@@ -1,0 +1,39 @@
+{% extends "registration/base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+    {% endblock %}
+
+    <title>Document</title>
+</head>
+<body>
+    
+    {% block content %}
+<div class="title">
+    <h1>Profile</h1>
+</div>
+<div class="center-container">
+    <div class="inner-container">
+    <h4>Welcome  {{ current_user.username }}!</h4>
+    <p>Client Name: {{ client.first_name }} {{ client.last_name }} </p>
+    <p>Account Number: {{ account.account_number }}</p>
+    <p>Account Balance: ${{ account.balance }}</p>
+    
+    
+    <p><a href="{% url 'banco_america:movements' %}" class="button">Movement History</a></p>
+    <p><a href="{% url 'banco_america:transaction' %}" class="button">Bank Transference</a></p>
+    <p><a href="{% url 'banco_america:home' %}" class="button">Home</a></p>
+    </div>
+</div>
+{% endblock %}
+
+</body>
+</html>

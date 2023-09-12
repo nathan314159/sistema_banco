@@ -1,0 +1,48 @@
+{% extends "registration/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    {% endblock %}
+    <title>Document</title>
+</head>
+<body>
+
+{% block content %}
+<div class="center-title">
+    <h1>Transaction</h1>
+</div>
+
+<div class="center-container">
+    <div class="inside conrainer">
+        <form method="post" action="{% url 'banco_america:transaction' %}">
+            {% csrf_token %}
+            {{ account_form.as_p }}
+            <button type="submit" class="custome-button">Check Account</button>
+            <a href="{% url 'banco_america:home' %}" class="custome-button">Home</a>
+        </form>
+        
+        {% if account_number %}
+            {% if account_exists %}
+                <p>Yes, account exists</p>
+        
+                <a href="{% url 'banco_america:deposit_online' %}" class="custome-button">Deposit Online</a>
+        
+            {% else %}
+                <p>No, account does not exist</p>
+            {% endif %}
+        {% endif %}
+        
+        
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
+
+
+

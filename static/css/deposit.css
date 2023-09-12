@@ -1,0 +1,51 @@
+body {
+    background-color: #232946;
+}
+
+p {
+    color: #b8c1ec;
+    font-size:25px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    color: #fffffe;
+    font-size:35px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.custome-button {
+    background-color: #eebbc3;
+    color: #232946;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.center-title {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 20vh; /* Set container height to 100% of viewport height */
+    text-align: center; /* Center text content */
+}
+
+.center-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 60vh; /* Set container height to 100% of viewport height */
+    text-align: center; /* Center text content */
+
+}
+
+ul.errorlist {
+    display: none;
+}

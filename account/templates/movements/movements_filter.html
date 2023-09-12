@@ -1,0 +1,15 @@
+<form method="get">
+    {{ search_form.as_p }}
+    <button type="submit">Search</button>
+</form>
+
+{% if transactions %}
+    <h2>Filtered Transactions:</h2>
+    <ul>
+        {% for transaction in transactions %}
+            <li>Transaction Date: {{ transaction.date }} | Amount: {{ transaction.amount }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No transactions found for the selected date.</p>
+{% endif %}

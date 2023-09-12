@@ -1,0 +1,16 @@
+body {
+    background-color: #232946;
+}
+
+p {
+    color: #b8c1ec;
+    font-size:25px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    color: #fffffe;
+    font-size:35px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}

@@ -1,0 +1,24 @@
+{% extends "registration/base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/registration.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="title">
+    <h1>Register Client</h1>
+</div>
+<div class="center-container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        
+        {{ form_client.as_p }}
+        {{ form_address.as_p }}
+        {{ type_account_form.as_p }}
+    
+        <button type="submit" class="custome-button">Submit</button>
+        <a href="{% url 'account:home' %}" class="custome-button">Home Page</a>
+    </form>
+</div>
+{% endblock %}

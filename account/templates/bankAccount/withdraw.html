@@ -1,0 +1,35 @@
+
+{% extends "registration/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/transaction.css' %}">
+    {% endblock %}
+    <title>Withdraw</title>
+</head>
+<body>
+
+{% block content %}
+<div class="center-title">
+    <h1>Withdraw</h1>
+</div>
+
+<div class="center-container">
+    <form method="post">
+        {% csrf_token %}
+
+        {{ account_number_form.as_p }}
+        {{ amount_form.as_p }}
+
+        <button type="submit" class="custome-button">Withdraw</button>
+        <a href="{% url 'banco_america:teller' %}" class="custome-button">Back to Teller</a>
+    </form>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
